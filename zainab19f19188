@@ -6,6 +6,14 @@ public class SalesAnalytics {
     for (SalesPerson salesPerson : topPerformers) {
       System.out.println(salesPerson.getName() + " is performing well with " + salesPerson.getTotalSales() + " in sales.");
     }
+    public static double calculateAverageSales(List<SalesPerson> salesPeople) {
+    double totalSales = 0;
+     for (SalesPerson salesPerson : salesPeople) {
+    totalSales += salesPerson.getTotalSales();
+  }
+  return totalSales / salesPeople.size();
+}
+
     List<Product> trendingProducts = SalesDatabase.getTrendingProducts();
     for (Product product : trendingProducts) {
       System.out.println(product.getName() + " has seen a " + product.getSalesTrend() + " in sales this month.");
