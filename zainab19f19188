@@ -1,0 +1,18 @@
+import java.util.List;
+
+public class SalesAnalytics {
+  public static void main(String[] args) {
+    List<SalesPerson> topPerformers = SalesDatabase.getTopPerformers();
+    for (SalesPerson salesPerson : topPerformers) {
+      System.out.println(salesPerson.getName() + " is performing well with " + salesPerson.getTotalSales() + " in sales.");
+    }
+    List<Product> trendingProducts = SalesDatabase.getTrendingProducts();
+    for (Product product : trendingProducts) {
+      System.out.println(product.getName() + " has seen a " + product.getSalesTrend() + " in sales this month.");
+    }
+    List<Product> growingProducts = SalesDatabase.getGrowingProducts();
+    for (Product product : growingProducts) {
+      System.out.println(product.getName() + " has seen a " + product.getSalesGrowth() + " in sales over the past year.");
+    }
+  }
+}
