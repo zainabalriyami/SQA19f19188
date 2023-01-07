@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class SalesAnalytics {
+public class Business analytics {
   public static void main(String[] args) {
     List<SalesPerson> topPerformers = SalesDatabase.getTopPerformers();
     for (SalesPerson salesPerson : topPerformers) {
